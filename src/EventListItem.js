@@ -6,7 +6,26 @@ const EventListItem = (props) => {
   const {event} = props
   return (
     <div className="event-list-item">
-      Hi i'm an event
+      <div className="event-date">
+        im a date
+      </div>
+      <div className="event-item-info">
+      <div className="event-item-title">
+        {event.EventName} at {event.VenueName}
+      </div>
+      <div className="event-item-location">
+        im a city/state
+      </div>
+      {(event.AvailableTickets > 0)?
+        <div className="green">
+          Tickets Available
+        </div>
+        :
+        <div className="red">
+          Sold Out
+        </div>
+      }
+      </div>
     </div>
   )
 }
