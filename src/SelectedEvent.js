@@ -2,10 +2,16 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 const SelectedEvent = (props) => {
+  const {event} = props
   return (
     <div className="app-section">
-      Hi i'm an event
+      <div className="event-item-title">
+        {event.EventName} at {event.VenueName}
+      </div>
     </div>
   )
 }
-export default SelectedEvent
+const mapState = (state) => ({
+  event : state.selected
+})
+export default connect(mapState)(SelectedEvent)

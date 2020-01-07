@@ -50,11 +50,17 @@ code {
   margin: 5px 0px;
   padding: 5px;
   display: flex;
+  justify-content: space-between;
 }
 
 .event-item-title{
   font-weight: 600;
   font-size: large;
+}
+
+.event-date{
+  text-align: center;
+  min-width: max-content;
 }
 
 .green{
