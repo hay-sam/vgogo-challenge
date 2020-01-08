@@ -11,14 +11,25 @@ const SelectedEvent = (props) => {
           <div id="event-venue">
             Live at the {event.VenueName}
           </div>
+          <div className="event-location">
+          {event.VenueCity}, {event.VenueCountry}
+        </div>
         </div>
         <div id="event-date">
-        <div className="event-date">
-        {event.Day+ " "}
-            {event.Month} {event.CalendarViewModel.DayOfMonth},{" "+event.CalendarViewModel.Year}
-          </div>
+          {event.Day+ " "}
+          {event.Month} {event.CalendarViewModel.DayOfMonth},{" "+event.CalendarViewModel.Year} @ {event.Time}
         </div>
-        <div id="event-info"></div>
+        <div id="event-info">
+        {(event.AvailableTickets > 0)?
+          <div className="green">
+           {event.AvailableTickets} Tickets Available from {event.MinPrice}
+          </div>
+          :
+          <div className="red">
+            Sold Out
+          </div>
+        }
+        </div>
       </div>
      {/* <div className="event-item-info">
         <div className="event-item-title">

@@ -3,7 +3,8 @@ import data from './data'
 
 const initialState = {
   selected : data.Items[0],
-  events : data.Items
+  events : data.Items,
+  location: null  //Part 2 addition
 }
 
 export const selectEvent = (event) => ({
@@ -11,10 +12,18 @@ export const selectEvent = (event) => ({
   event
 })
 
+// For Part 2
+export const selectLocation = (location) => ({
+  type: "LOCATION_SELECTED",
+  location
+})
+
 const reducer = (state = initialState, action) => {
     switch (action.type){
       case "EVENT_SELECTED":
         return {...state, selected: action.event}
+      case "LOCATION_SELECTED":
+        return {...state, location: action.location}
       default:
          return state
     }

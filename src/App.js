@@ -1,12 +1,16 @@
 import React from 'react';
 import SelectedEvent from './SelectedEvent'
 import EventList from './EventList'
+import LocationSelect from './LocationSelect'
 
 function App() {
   return (
     <div id="App">
-      <SelectedEvent />
-      <EventList />
+      <LocationSelect />
+      <div id="content">
+        <SelectedEvent />
+        <EventList />
+      </div>
     </div>
   );
 }
