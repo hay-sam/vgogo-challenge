@@ -110,7 +110,16 @@ code {
 ******************/
 #location-select{
   height: 40px;
+  padding: 10px;
   background-color: #586F7C;
   color:white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 600;
+}
+
+#selector{
+  margin-left: 5px;
 }
 

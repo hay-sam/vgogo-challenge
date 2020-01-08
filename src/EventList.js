@@ -1,9 +1,16 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import EventListItem from './EventListItem'
+import {selectEvent} from './store'
 
 const EventList = (props) => {
-  const {events} = props
+  let {events} = props
+  if(props.location){
+    events = events.filter(event => {
+      return props.location === event.VenueCity+", "+event.VenueCountry
+    })
+  }
+  props.selectEvent(events[0])
   return (
     <div className="app-section">
       <div id="event-list">
@@ -15,6 +22,10 @@ const EventList = (props) => {
   )
 }
 const mapState = (state) => ({
-  events : state.events
+  events : state.events,
+  location: state.location
 })
-export default connect(mapState)(EventList)
+const mapDispatch = (dispatch) => ({
+  selectEvent : (event) => dispatch(selectEvent(event))
+})
+export default connect(mapState, mapDispatch)(EventList)
