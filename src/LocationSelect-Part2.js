@@ -16,7 +16,7 @@ const Location = props => {
     <div id="location-select">
       <div> Select a Location:</div>
       <select id="selector" defaultValue={props.location} onChange={handleChange}>
-        <option value="null">
+        <option value="">
           All Locations
         </option>
         {locations.map(place => {

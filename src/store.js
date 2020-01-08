@@ -4,7 +4,7 @@ import data from './data'
 const initialState = {
   selected : data.Items[0],
   events : data.Items,
-  location: null  //Part 2 addition
+  location: ""  //Part 2 addition
 }
 
 export const selectEvent = (event) => ({

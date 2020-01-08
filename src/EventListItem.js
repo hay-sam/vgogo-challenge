@@ -12,7 +12,7 @@ const EventListItem = (props) => {
           {event.EventName} at {event.VenueName}
         </div>
         <div className="event-item-location">
-          {event.VenueCity},{event.VenueCountry}
+          {event.VenueCity}, {event.VenueCountry}
         </div>
         {(event.AvailableTickets > 0)?
           <div className="green">

@@ -1,7 +1,7 @@
 import React from 'react';
 import SelectedEvent from './SelectedEvent'
 import EventList from './EventList'
-import LocationSelect from './LocationSelect'
+import LocationSelect from './LocationSelect-Part2'
 
 function App() {
   return (

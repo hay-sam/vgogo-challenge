@@ -5,12 +5,14 @@ import {selectEvent} from './store'
 
 const EventList = (props) => {
   let {events} = props
+
+  // Filter Based on location for part 2
   if(props.location){
     events = events.filter(event => {
       return props.location === event.VenueCity+", "+event.VenueCountry
     })
   }
-  props.selectEvent(events[0])
+  props.selectEvent(events[0]) //Reset selected to first item in filtered list
   return (
     <div className="app-section">
       <div id="event-list">
