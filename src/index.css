@@ -20,17 +20,17 @@ code {
 #App {
   display: flex;
   justify-content: center;
-  border: 20px white solid;
-  padding: 5px;
+  border: 15px #FCFAFA solid;
+  padding: 10px;
   min-height: 600px;
   height: 100vh;
-  background-color: aquamarine;
+  background-color: #0D3B66;
 
 }
 
 .app-section{
   flex: 0 0 50%;
-  background-color: rgba(214, 209, 219, 0.692);
+  background-color: #C8D3D5;
   padding: 5px;
 }
 
@@ -61,6 +61,7 @@ code {
 .event-date{
   text-align: center;
   min-width: max-content;
+  color: #586F7C
 }
 
 .green{
